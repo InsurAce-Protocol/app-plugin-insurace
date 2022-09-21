@@ -46,10 +46,10 @@ void handle_init_contract(void *parameters) {
     // to parse.
     switch (context->selectorIndex) {
         case INSURACE_C_COVER_M_BUY_COVER_V3:
-            context->next_param = MIN_AMOUNT_RECEIVED;
+            context->next_param = INSURACE_C_COVER_M_BUY_COVER_V3_P_PRODUCTS_OFFSET;
             break;
         case INSURACE_C_COVER_M_CANCEL_COVER:
-            context->next_param = TOKEN_RECEIVED;
+            context->next_param = INSURACE_C_COVER_M_CANCEL_COVER_P_COVER_ID;
             break;
         // Keep this
         default:
