@@ -29,6 +29,8 @@ typedef enum {
     PATH_OFFSET,
     PATH_LENGTH,
     UNEXPECTED_PARAMETER,
+    INSURACE_C_COVER_M_BUY_COVER_V3_P_PRODUCTS_OFFSET,
+    INSURACE_C_COVER_M_CANCEL_COVER_P_COVER_ID,
 } parameter;
 
 // EDIT THIS: Rename `BOILERPLATE` to be the same as the one initialized in `main.c`.
