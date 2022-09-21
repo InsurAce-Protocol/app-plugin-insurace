@@ -32,7 +32,7 @@ static const uint32_t SELECTOR_INSURACE_C_COVER_M_CANCEL_COVER = 0xb77b9409; // 
 // Array of all the different boilerplate selectors. Make sure this follows the same order as the
 // enum defined in `boilerplate_plugin.h`
 // EDIT THIS: Use the names of the array declared above.
-const uint32_t BOILERPLATE_SELECTORS[NUM_SELECTORS] = {
+const uint32_t INSURACE_SELECTORS[NUM_SELECTORS] = {
     SELECTOR_INSURACE_C_COVER_M_BUY_COVER_V3,
     SELECTOR_INSURACE_C_COVER_M_CANCEL_COVER,
 };
