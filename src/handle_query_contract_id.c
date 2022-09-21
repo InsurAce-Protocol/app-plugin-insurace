@@ -12,7 +12,11 @@ void handle_query_contract_id(void *parameters) {
 
     // EDIT THIS: Adapt the cases by modifying the strings you pass to `strlcpy`.
     if (context->selectorIndex == INSURACE_C_COVER_M_BUY_COVER_V3) {
-        strlcpy(msg->version, "Swap", msg->versionLength);
+        strlcpy(msg->version, "Buy Cover", msg->versionLength);
+        msg->result = ETH_PLUGIN_RESULT_OK;
+    }
+    else if (context->selectorIndex == INSURACE_C_COVER_M_CANCEL_COVER) {
+        strlcpy(msg->version, "Cancel Cover", msg->versionLength);
         msg->result = ETH_PLUGIN_RESULT_OK;
     } else {
         PRINTF("Selector index: %d not supported\n", context->selectorIndex);
