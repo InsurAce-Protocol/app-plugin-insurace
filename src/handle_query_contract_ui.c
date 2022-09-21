@@ -72,7 +72,8 @@ void set_first_param_ui(ethQueryContractUI_t *msg, context_t *context) {
             strlcpy(msg->msg, "Cover ", msg->msgLength);
             break;
         default:
-            PRINTF("Wrong selector index = %d", context->selectorIndex);
+            PRINTF("Wrong selector index = %d\n", context->selectorIndex);
+            msg->result = ETH_PLUGIN_RESULT_ERROR;
             break;
     }
 }
