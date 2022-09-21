@@ -1,0 +1,154 @@
+static const uint32_t INSURACE_C_COVER_M_BUY_COVER_V3 = 0xaaef41b9; // Txn on https://etherscan.io/tx/0x651e1be4a0f5ebc6efdc24bcb8a869d4f8c737ed67bd81c26939160bf2caa48a
+static const uint32_t INSURACE_C_COVER_M_CANCEL_COVER = 0xb77b9409; // Txn on https://etherscan.io/tx/0x9d9ea4c89daa7c93b69a07674bd6ac44e95ee6975b224339f36c17a04e5e7fbb
+
+IA contracts - https://docs.insurace.io/landing-page/developer-reference/contract-addresses
+
+contract Cover - https://etherscan.io/address/0x88Ef6F235a4790292068646e79Ee563339c796a0#code
+
+buyCoverV3 - https://etherscan.io/tx/0x651e1be4a0f5ebc6efdc24bcb8a869d4f8c737ed67bd81c26939160bf2caa48a
+
+function: buyCoverV3(uint16[] products,             // products[0]
+                    uint16[] durationInDays,        // durationInDays[0]
+                    uint256[] amounts,              // amounts[0]
+                    address[] addresses,            // addresses[0] -> owner (the cover owner address)
+                                                    // addresses[1] -> currency (the cover amount currency)
+                                                    // addresses[2] -> premiumCurrency (the cover premium currency)
+                    uint256 premiumAmount,          // premiumAmount
+                    uint256 referralCode,           // referralCode
+                    uint256[] helperParameters, 
+                    uint256[] securityParameters, 
+                    string freeText, 
+                    uint8[] v, 
+                    bytes32[] r, 
+                    bytes32[] s)
+
+| Buy Cover  | Product | Duration | Amounts | Owner | Premium |
+| InsurAce   | xx      | Days xx  | ETH xxx | 0x... | DAI xxx |
+
+| InsurAce  | Amounts | Premium | Owner |
+| Buy Cover | ETH xxx | DAI xxx | 0x... |
+
+| InsurAce  
+| Buy Cover 
+
+| InsurAce  
+| Cancel Cover 
+
+
+MethodID: 0xaaef41b9
+[0]:  0000000000000000000000000000000000000000000000000000000000000180
+[1]:  00000000000000000000000000000000000000000000000000000000000001c0
+[2]:  0000000000000000000000000000000000000000000000000000000000000200
+[3]:  0000000000000000000000000000000000000000000000000000000000000240
+[4]:  00000000000000000000000000000000000000000000000000000000087044e8
+[5]:  0000000000000000000000005f799f365fa8a2b60ac0429c48b153ca5a6f0cf8
+[6]:  00000000000000000000000000000000000000000000000000000000000002c0
+[7]:  0000000000000000000000000000000000000000000000000000000000000360
+[8]:  00000000000000000000000000000000000000000000000000000000000003c0
+[9]:  0000000000000000000000000000000000000000000000000000000000000440
+[10]: 0000000000000000000000000000000000000000000000000000000000000480
+[11]: 00000000000000000000000000000000000000000000000000000000000004c0
+[12]: 0000000000000000000000000000000000000000000000000000000000000001
+[13]: 000000000000000000000000000000000000000000000000000000000000007c
+[14]: 0000000000000000000000000000000000000000000000000000000000000001
+[15]: 000000000000000000000000000000000000000000000000000000000000001e
+[16]: 0000000000000000000000000000000000000000000000000000000000000001
+[17]: 00000000000000000000000000000000000000000000000000000004a817c800
+[18]: 0000000000000000000000000000000000000000000000000000000000000003
+[19]: 0000000000000000000000009c05e87d3448ef3223d282c8f14523ba2362af56
+[20]: 000000000000000000000000dac17f958d2ee523a2206206994597c13d831ec7
+[21]: 000000000000000000000000dac17f958d2ee523a2206206994597c13d831ec7
+[22]: 0000000000000000000000000000000000000000000000000000000000000004
+[23]: 00000000000000000000000000000000000000000000000000000004a817c800
+[24]: 0000000000000000000000000000000000000000000000000000d8a44262b000
+[25]: 00000000000000000000000000000000000000000000000000000000000001f4
+[26]: 00000000000000000000000000000000000000000000000000000000000003e8
+[27]: 0000000000000000000000000000000000000000000000000000000000000002
+[28]: 0000000000000000000000000000000000000000000000000000000000eceb08
+[29]: 000000000000000000000000000000000000000000000000000000006320688d
+[30]: 0000000000000000000000000000000000000000000000000000000000000058
+[31]: 7b2270726f64756374496473223a5b22313234225d2c22636f76657265644164
+[32]: 64726573736573223a5b22307839633035653837643334343865663332323364
+[33]: 323832633866313435323362613233363261663536225d7d0000000000000000
+[34]: 0000000000000000000000000000000000000000000000000000000000000001
+[35]: 000000000000000000000000000000000000000000000000000000000000001c
+[36]: 0000000000000000000000000000000000000000000000000000000000000001
+[37]: 2e9ab1cf2bef3be8091e6fd9492aaf3616801b2b03724895c46782946a97b866
+[38]: 0000000000000000000000000000000000000000000000000000000000000001
+[39]: 38241a5b844677d1ccb157d81d8bc2ea6056176110b9cabc7c7033528418bc93
+
+
+function _buyCover(
+        uint16[] memory products,
+        uint16[] memory durationInDays,
+        uint256[] memory amounts,
+        address[] memory addresses,
+        uint256 premiumAmount,
+        uint256 referralCode,
+        uint256[] memory helperParameters,
+        uint256[] memory securityParameters,
+        string memory freeText
+    ) internal {
+        // check the number of cover details
+        require(products.length == durationInDays.length, "BC: 1");
+        require(products.length == amounts.length, "BC: 2");
+
+        // check the address list
+        // addresses[0] -> owner (the cover owner address)
+        // addresses[1] -> currency (the cover amount currency)
+        // addresses[2] -> premiumCurrency (the cover premium currency)
+        require(ICoverConfig(cfg).isValidCurrency(addresses[1]) && ICoverConfig(cfg).isValidCurrency(addresses[2]), "BC: 3");
+
+        // check the beneficiary address list (its length is 2)
+        require(addresses[0] != address(0), "BC: 4");
+        require(address(uint160(referralCode)) != address(0), "BC: 5");
+
+        // check the helper parameters (its length is 4)
+        // helperParameters[0] -> totalAmounts (the sum of cover amounts)
+        // helperParameters[1] -> totalWeight (the sum of cover amount * cover duration * cover unit cost)
+        // helperParameters[2] -> coverOwnerRewardPctg (the cover owner reward perentageX10000 of premium, 0 if not set)
+        // helperParameters[3] -> referralRewardPctg (the referral reward perentageX10000 of premium, 0 if not set)
+        require(helperParameters.length == 4, "BC: 6");
+
+        // check the security parameters (its length is 2)
+        // securityParameters[0] -> blockNumber (the block number when the signature is generated off-chain)
+        // securityParameters[1] -> nonce (the nonce of the cover owner, can be timestamp in seconds)
+        require(securityParameters.length == 2, "BC: 7");
+
+        // check the block number latency
+        require((block.number >= securityParameters[0]) && (block.number - securityParameters[0] <= buyCoverMaxBlkNumLatency), "BC: 8");
+
+        // check the cover owner nonce flag
+        require(!buyCoverNonceFlagMap[addresses[0]][securityParameters[1]], "BC: 9");
+        buyCoverNonceFlagMap[addresses[0]][securityParameters[1]] = true;
+
+        // check and receive the premium from this transaction
+        _receivePremium(_msgSender(), addresses[2], premiumAmount);
+
+        // process the cover creation and reward distribution
+        ICoverPurchase(coverPurchase).buyCover(products, durationInDays, amounts, addresses, premiumAmount, referralCode, helperParameters, freeText);
+    }
+
+// IA cancel cover
+Txn - https://etherscan.io/tx/0x9d9ea4c89daa7c93b69a07674bd6ac44e95ee6975b224339f36c17a04e5e7fbb
+
+Function: cancelCover(uint256 coverId)
+
+MethodID: 0xb77b9409
+[0]:  0000000000000000000000000000000000000000000000000000000000000003
+
+// UniSwap
+
+Methods in a smart contract have parameters (or arguments). For example, swapExactEthforTokens has this format:
+
+swapExactETHForTokens(uint256 amountOutMin,
+                        address[] path,
+                        address to,
+                        uint256 deadline)
+
+So, the parameters for this function are:
+
+uint256 amountOutMin: is the minimum amount in tokens the user will get from their swap.
+address[] path: is an array of paths. If we look at the contract source code on Etherscan, the only paths used are path[0] and path[1], where path[0] is the OUTGOING token, and path[1] the INCOMING one.
+address to: is the address to which the tokens are sent back.
+uint256 deadline: is the swap deadline after which it will fail.
