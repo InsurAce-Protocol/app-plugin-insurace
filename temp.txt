@@ -28,11 +28,11 @@ function: buyCoverV3(uint16[] products,             // products[0]
 | InsurAce  | Amounts | Premium | Owner |
 | Buy Cover | ETH xxx | DAI xxx | 0x... |
 
-| InsurAce  
-| Buy Cover 
+| InsurAce  | Buy       | Approval | Reject |
+| Cover     | Cover     |          |        |
 
-| InsurAce  
-| Cancel Cover 
+| InsurAce  | Cancel    | Approval | Reject |
+| Cover     | Cover     |          |        |
 
 
 MethodID: 0xaaef41b9
