@@ -1,7 +1,8 @@
 #include "insurace_plugin.h"
 
 // EDIT THIS: Remove this function and write your own handlers!
-// static void handle_swap_exact_eth_for_tokens(ethPluginProvideParameter_t *msg, context_t *context) {
+// static void handle_swap_exact_eth_for_tokens(ethPluginProvideParameter_t *msg, 
+//                                              context_t *context) {
 //     if (context->go_to_offset) {
 //         if (msg->parameterOffset != context->offset + SELECTOR_SIZE) {
 //             return;
@@ -30,7 +31,9 @@
 //             context->next_param = TOKEN_RECEIVED;
 //             break;
 //         case TOKEN_RECEIVED:  // path[1] -> contract address of token received
-//             copy_address(context->token_received, msg->parameter, sizeof(context->token_received));
+            // copy_address(context->token_received, 
+            //              msg->parameter, 
+            //              sizeof(context->token_received));
 //             context->next_param = UNEXPECTED_PARAMETER;
 //             break;
 //         // Keep this
@@ -41,7 +44,8 @@
 //     }
 // }
 
-static void handle_insurace_c_cover_m_buy_cover_v3(ethPluginProvideParameter_t *msg, context_t *context) {
+static void handle_insurace_c_cover_m_buy_cover_v3(ethPluginProvideParameter_t *msg, 
+                                                   context_t *context) {
     if (context->go_to_offset) {
         if (msg->parameterOffset != context->offset + SELECTOR_SIZE) {
             return;
@@ -60,7 +64,8 @@ static void handle_insurace_c_cover_m_buy_cover_v3(ethPluginProvideParameter_t *
     }
 }
 
-static void handle_insurace_c_cover_m_cancel_cover(ethPluginProvideParameter_t *msg, context_t *context) {
+static void handle_insurace_c_cover_m_cancel_cover(ethPluginProvideParameter_t *msg, 
+                                                   context_t *context) {
     if (context->go_to_offset) {
         if (msg->parameterOffset != context->offset + SELECTOR_SIZE) {
             return;

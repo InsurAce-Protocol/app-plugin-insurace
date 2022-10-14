@@ -25,3 +25,6 @@ tests/elfs
 
 # Ledger Ethereum APP cloned from github
 ethereum-plugin-sdk
+
+# MacOS
+tests/.DS_Store

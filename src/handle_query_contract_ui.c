@@ -24,7 +24,8 @@
 //     uint8_t decimals = context->decimals;
 //     const char *ticker = context->ticker;
 
-//     // If the token look up failed, use the default network ticker along with the default decimals.
+//     // If the token look up failed, 
+//     // use the default network ticker along with the default decimals.
 //     if (!context->token_found) {
 //         decimals = WEI_TO_ETHER;
 //         ticker = msg->network_ticker;
