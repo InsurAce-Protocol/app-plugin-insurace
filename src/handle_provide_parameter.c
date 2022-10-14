@@ -31,9 +31,9 @@
 //             context->next_param = TOKEN_RECEIVED;
 //             break;
 //         case TOKEN_RECEIVED:  // path[1] -> contract address of token received
-            // copy_address(context->token_received, 
-            //              msg->parameter, 
-            //              sizeof(context->token_received));
+//             copy_address(context->token_received, 
+//                          msg->parameter, 
+//                          sizeof(context->token_received));
 //             context->next_param = UNEXPECTED_PARAMETER;
 //             break;
 //         // Keep this
@@ -44,7 +44,7 @@
 //     }
 // }
 
-static void handle_insurace_c_cover_m_buy_cover_v3(ethPluginProvideParameter_t *msg, 
+static void handle_insurace_c_cover_m_buy_cover_v3(ethPluginProvideParameter_t *msg,
                                                    context_t *context) {
     if (context->go_to_offset) {
         if (msg->parameterOffset != context->offset + SELECTOR_SIZE) {
