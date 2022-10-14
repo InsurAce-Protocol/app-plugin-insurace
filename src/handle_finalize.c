@@ -9,10 +9,8 @@ void handle_finalize(void *parameters) {
     // EDIT THIS: Set the total number of screen you will need.
     msg->numScreens = 1;
 
-
     // EDIT THIS: Handle this case like you wish to (i.e. maybe no additional screen needed?).
     // If the beneficiary is NOT the sender, we will need an additional screen to display it.
-    
 
     // Not required for InsurAce
     // if (memcmp(msg->address, context->beneficiary, ADDRESS_LENGTH) != 0) {
@@ -21,8 +19,7 @@ void handle_finalize(void *parameters) {
 
     // EDIT THIS: set `tokenLookup1` (and maybe `tokenLookup2`) to point to
     // token addresses you will info for (such as decimals, ticker...).
-    
-    
+
     // Not required for InsurAce
     // msg->tokenLookup1 = context->token_received;
 

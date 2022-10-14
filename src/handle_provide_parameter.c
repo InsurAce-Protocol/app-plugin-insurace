@@ -1,7 +1,7 @@
 #include "insurace_plugin.h"
 
 // EDIT THIS: Remove this function and write your own handlers!
-// static void handle_swap_exact_eth_for_tokens(ethPluginProvideParameter_t *msg, 
+// static void handle_swap_exact_eth_for_tokens(ethPluginProvideParameter_t *msg,
 //                                              context_t *context) {
 //     if (context->go_to_offset) {
 //         if (msg->parameterOffset != context->offset + SELECTOR_SIZE) {
@@ -64,7 +64,7 @@ static void handle_insurace_c_cover_m_buy_cover_v3(ethPluginProvideParameter_t *
     }
 }
 
-static void handle_insurace_c_cover_m_cancel_cover(ethPluginProvideParameter_t *msg, 
+static void handle_insurace_c_cover_m_cancel_cover(ethPluginProvideParameter_t *msg,
                                                    context_t *context) {
     if (context->go_to_offset) {
         if (msg->parameterOffset != context->offset + SELECTOR_SIZE) {

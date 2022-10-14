@@ -28,10 +28,10 @@
 // EDIT THIS: Adapt the variable names and change the `0x` values to match your selectors.
 
 // Txn https://etherscan.io/tx/0x651e1be4a0f5ebc6efdc24bcb8a869d4f8c737ed67bd81c26939160bf2caa48a
-static const uint32_t SELECTOR_INSURACE_C_COVER_M_BUY_COVER_V3 = 0xaaef41b9; 
+static const uint32_t SELECTOR_INSURACE_C_COVER_M_BUY_COVER_V3 = 0xaaef41b9;
 
 // Txn https://etherscan.io/tx/0x9d9ea4c89daa7c93b69a07674bd6ac44e95ee6975b224339f36c17a04e5e7fbb
-static const uint32_t SELECTOR_INSURACE_C_COVER_M_CANCEL_COVER = 0xb77b9409; 
+static const uint32_t SELECTOR_INSURACE_C_COVER_M_CANCEL_COVER = 0xb77b9409;
 
 // Array of all the different boilerplate selectors. Make sure this follows the same order as the
 // enum defined in `boilerplate_plugin.h`

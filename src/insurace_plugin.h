@@ -37,8 +37,8 @@ typedef enum {
 extern const uint32_t INSURACE_SELECTORS[NUM_SELECTORS];
 
 // Shared global memory with Ethereum app. Must be at most 5 * 32 bytes.
-// EDIT THIS: This struct is used by your plugin to save the parameters you parse. You
-// will need to adapt this struct to your plugin.
+// EDIT THIS: This struct is used by your plugin to save the parameters you parse.
+// You will need to adapt this struct to your plugin.
 typedef struct context_t {
     // For display.
     uint8_t amount_received[INT256_LENGTH];
@@ -58,8 +58,8 @@ typedef struct context_t {
     selector_t selectorIndex;
 } context_t;
 
-// Piece of code that will check that the above structure is not bigger than 5 * 32. Do not remove
-// this check.
+// Piece of code that will check that the above structure is not bigger than 5 * 32.
+// Do not remove this check.
 _Static_assert(sizeof(context_t) <= 5 * 32, "Structure of parameters too big.");
 
 void handle_provide_parameter(void *parameters);
