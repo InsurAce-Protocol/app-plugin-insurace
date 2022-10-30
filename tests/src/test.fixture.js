@@ -27,6 +27,10 @@ const NANOS_PLUGIN_PATH = Resolve('elfs/plugin_nanos.elf');
 const NANOSP_PLUGIN_PATH = Resolve('elfs/plugin_nanosp.elf');
 const NANOX_PLUGIN_PATH = Resolve('elfs/plugin_nanox.elf');
 
+const NANOS_PLUGIN = { "InsurAce": NANOS_PLUGIN_PATH };
+const NANOSP_PLUGIN = { "InsurAce": NANOSP_PLUGIN_PATH };
+const NANOX_PLUGIN = { "InsurAce": NANOX_PLUGIN_PATH };
+
 const nano_models: DeviceModel[] = [
     { name: 'nanos', letter: 'S', path: NANOS_PLUGIN_PATH, eth_path: NANOS_ETH_PATH },
     { name: 'nanosp', letter: 'SP', path: NANOSP_PLUGIN_PATH, eth_path: NANOSP_ETH_PATH },

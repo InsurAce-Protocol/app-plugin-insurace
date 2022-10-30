@@ -2,16 +2,24 @@
     "chainId": 1,
     "contracts": [
         {
-            "address": "0x88Ef6F235a4790292068646e79Ee563339c796a0", // address of the contract address to interact with
-            "contractName": "Cover", // contract name is not used so feel free name as you wish.
-            "selectors": { // list of selectors 
-                "0xaaef41b9": { // bytes of the selector    Function: buyCoverV3
-                    "erc20OfInterest": [ // more information down below
+            "address": "0x88ef6f235a4790292068646e79ee563339c796a0",
+            "contractName": "Cover",
+            "selectors": {
+                "0xaaef41b9": {
+                    "erc20OfInterest": [
                         "addresses.1",
                         "addresses.2"
                     ],
-                    "method": "buyCoverV3", // method name: feel free to user whichever name you want to use
-                    "plugin": "InsurAce" // plugin name
+                    "method": "buyCoverV3",
+                    "plugin": "InsurAce"
+                } , 
+                "0xb77b9409": {
+                "erc20OfInterest": [
+                    "addresses.1",
+                    "addresses.2"
+                ],
+                "method": "cancelCover",
+                "plugin": "InsurAce"
                 }
             }
         }
