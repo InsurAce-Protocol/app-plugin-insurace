@@ -7,19 +7,15 @@
             "selectors": {
                 "0xaaef41b9": {
                     "erc20OfInterest": [
-                        "addresses.1",
-                        "addresses.2"
                     ],
                     "method": "buyCoverV3",
                     "plugin": "InsurAce"
                 } , 
                 "0xb77b9409": {
-                "erc20OfInterest": [
-                    "addresses.1",
-                    "addresses.2"
-                ],
-                "method": "cancelCover",
-                "plugin": "InsurAce"
+                    "erc20OfInterest": [
+                    ],
+                    "method": "cancelCover",
+                    "plugin": "InsurAce"
                 }
             }
         }
