@@ -25,12 +25,12 @@ nano_models.forEach(function(model) {
     serializedTx,
   );
 
-  const right_clicks = model.letter === 'S' ? 12 : 6;
+  const right_clicks = model.letter === 'S' ? 6 : 4;
 
   // Wait for the application to actually load and parse the transaction
   await waitForAppScreen(sim);
   // Navigate the display by pressing the right button `right_clicks` times, then pressing both buttons to accept the transaction.
-  await sim.navigateAndCompareSnapshots('.', model.name + '_swap_exact_eth_for_tokens_with_beneficiary', [right_clicks, 0]);
+  await sim.navigateAndCompareSnapshots('.', model.name + '_insurace_buy_cover_v3', [right_clicks, 0]);
 
   await tx;
   }));
