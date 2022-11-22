@@ -100,10 +100,10 @@ void handle_provide_parameter(void *parameters) {
     // EDIT THIS: adapt the cases and the names of the functions.
     switch (context->selectorIndex) {
         case INSURACE_C_COVER_M_BUY_COVER_V3:
-            //handle_insurace_c_cover_m_buy_cover_v3(msg, context);
+            // handle_insurace_c_cover_m_buy_cover_v3(msg, context);
             break;
         case INSURACE_C_COVER_M_CANCEL_COVER:
-            //handle_insurace_c_cover_m_cancel_cover(msg, context);
+            // handle_insurace_c_cover_m_cancel_cover(msg, context);
             break;
         default:
             PRINTF("Selector Index not supported: %d\n", context->selectorIndex);
