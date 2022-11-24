@@ -33,7 +33,7 @@ typedef enum {
     INSURACE_C_COVER_M_BUY_COVER_V3_P_PRODUCTS_OFFSET,
     INSURACE_C_COVER_M_CANCEL_COVER_P_COVER_ID,
     INSURACE_C_StakingV2Controller_M_stakeTokens_P_amount,
-    //INSURACE_C_StakingV2Controller_M_stakeTokens_P_token,
+    // INSURACE_C_StakingV2Controller_M_stakeTokens_P_token,
 } parameter;
 
 // EDIT THIS: Rename `BOILERPLATE` to be the same as the one initialized in `main.c`.

@@ -53,7 +53,7 @@ void handle_init_contract(void *parameters) {
             break;
         case INSURACE_C_StakingV2Controller_M_stakeTokens:
             context->next_param = INSURACE_C_StakingV2Controller_M_stakeTokens_P_amount;
-            break;            
+            break;
         // Keep this
         default:
             PRINTF("Missing selectorIndex: %d\n", context->selectorIndex);
