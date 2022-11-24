@@ -51,6 +51,9 @@ void handle_init_contract(void *parameters) {
         case INSURACE_C_COVER_M_CANCEL_COVER:
             context->next_param = INSURACE_C_COVER_M_CANCEL_COVER_P_COVER_ID;
             break;
+        case INSURACE_C_StakingV2Controller_M_stakeTokens:
+            context->next_param = INSURACE_C_StakingV2Controller_M_stakeTokens_P_amount;
+            break;            
         // Keep this
         default:
             PRINTF("Missing selectorIndex: %d\n", context->selectorIndex);

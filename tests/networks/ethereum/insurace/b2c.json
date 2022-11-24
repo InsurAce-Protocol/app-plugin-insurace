@@ -18,6 +18,18 @@
                     "plugin": "InsurAce"
                 }
             }
+        },
+        {
+            "address": "0x7d8c3f38c8545a770d57c8043d54e5715b1c584e",
+            "contractName": "StakingV2Controller",
+            "selectors": {
+                "0x0bea440d": {
+                    "erc20OfInterest": [
+                    ],
+                    "method": "stakeTokens",
+                    "plugin": "InsurAce"
+                }
+            }
         }
     ],
     "name": "InsurAce"

@@ -105,6 +105,8 @@ void handle_provide_parameter(void *parameters) {
         case INSURACE_C_COVER_M_CANCEL_COVER:
             // handle_insurace_c_cover_m_cancel_cover(msg, context);
             break;
+        case INSURACE_C_StakingV2Controller_M_stakeTokens:
+            break;            
         default:
             PRINTF("Selector Index not supported: %d\n", context->selectorIndex);
             msg->result = ETH_PLUGIN_RESULT_ERROR;

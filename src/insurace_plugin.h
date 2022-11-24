@@ -6,7 +6,7 @@
 
 // Number of selectors defined in this plugin. Should match the enum `selector_t`.
 // EDIT THIS: Put in the number of selectors your plugin is going to support.
-#define NUM_SELECTORS 2
+#define NUM_SELECTORS 3
 
 // Name of the plugin.
 // EDIT THIS: Replace with your plugin name.
@@ -18,6 +18,7 @@
 typedef enum {
     INSURACE_C_COVER_M_BUY_COVER_V3 = 0,
     INSURACE_C_COVER_M_CANCEL_COVER,
+    INSURACE_C_StakingV2Controller_M_stakeTokens,
 } selector_t;
 
 // Enumeration used to parse the smart contract data.
@@ -31,6 +32,8 @@ typedef enum {
     UNEXPECTED_PARAMETER,
     INSURACE_C_COVER_M_BUY_COVER_V3_P_PRODUCTS_OFFSET,
     INSURACE_C_COVER_M_CANCEL_COVER_P_COVER_ID,
+    INSURACE_C_StakingV2Controller_M_stakeTokens_P_amount,
+    //INSURACE_C_StakingV2Controller_M_stakeTokens_P_token,
 } parameter;
 
 // EDIT THIS: Rename `BOILERPLATE` to be the same as the one initialized in `main.c`.

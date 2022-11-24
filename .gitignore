@@ -28,3 +28,5 @@ ethereum-plugin-sdk
 
 # MacOS
 tests/.DS_Store
+tests/snapshots/.DS_Store
+.DS_Store

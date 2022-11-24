@@ -26,6 +26,7 @@ void handle_query_contract_id(void *parameters) {
     switch (context->selectorIndex) {
         case INSURACE_C_COVER_M_BUY_COVER_V3:
         case INSURACE_C_COVER_M_CANCEL_COVER:
+        case INSURACE_C_StakingV2Controller_M_stakeTokens:
             strlcpy(msg->version, "Transactions", msg->versionLength);
             msg->result = ETH_PLUGIN_RESULT_OK;
             break;

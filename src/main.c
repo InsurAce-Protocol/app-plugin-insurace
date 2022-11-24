@@ -33,12 +33,16 @@ static const uint32_t SELECTOR_INSURACE_C_COVER_M_BUY_COVER_V3 = 0xaaef41b9;
 // Txn https://etherscan.io/tx/0x9d9ea4c89daa7c93b69a07674bd6ac44e95ee6975b224339f36c17a04e5e7fbb
 static const uint32_t SELECTOR_INSURACE_C_COVER_M_CANCEL_COVER = 0xb77b9409;
 
+// Txn - https://etherscan.io/tx/0x60132f221121a16beb6757426a2ebe9697658154bfc3eb5bdf49612cb6c91976
+static const uint32_t SELECTOR_INSURACE_C_StakingV2Controller_M_stakeTokens = 0x0bea440d;
+
 // Array of all the different boilerplate selectors. Make sure this follows the same order as the
 // enum defined in `boilerplate_plugin.h`
 // EDIT THIS: Use the names of the array declared above.
 const uint32_t INSURACE_SELECTORS[NUM_SELECTORS] = {
     SELECTOR_INSURACE_C_COVER_M_BUY_COVER_V3,
     SELECTOR_INSURACE_C_COVER_M_CANCEL_COVER,
+    SELECTOR_INSURACE_C_StakingV2Controller_M_stakeTokens,
 };
 
 // Function to dispatch calls from the ethereum app.

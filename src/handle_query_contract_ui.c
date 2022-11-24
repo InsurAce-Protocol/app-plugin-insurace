@@ -66,12 +66,16 @@ void set_first_param_ui(ethQueryContractUI_t *msg, context_t *context) {
     switch (context->selectorIndex) {
         case INSURACE_C_COVER_M_BUY_COVER_V3:
             strlcpy(msg->title, "Buy", msg->titleLength);
-            strlcpy(msg->msg, "Cover ", msg->msgLength);
+            strlcpy(msg->msg, "Cover", msg->msgLength);
             break;
         case INSURACE_C_COVER_M_CANCEL_COVER:
             strlcpy(msg->title, "Cancel", msg->titleLength);
-            strlcpy(msg->msg, "Cover ", msg->msgLength);
+            strlcpy(msg->msg, "Cover", msg->msgLength);
             break;
+        case INSURACE_C_StakingV2Controller_M_stakeTokens:
+            strlcpy(msg->title, "Stake", msg->titleLength);
+            strlcpy(msg->msg, "Tokens", msg->msgLength);
+            break;            
         default:
             PRINTF("Wrong selector index = %d\n", context->selectorIndex);
             msg->result = ETH_PLUGIN_RESULT_ERROR;
