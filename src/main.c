@@ -36,6 +36,18 @@ static const uint32_t SELECTOR_INSURACE_C_COVER_M_CANCEL_COVER = 0xb77b9409;
 // Txn - https://etherscan.io/tx/0x60132f221121a16beb6757426a2ebe9697658154bfc3eb5bdf49612cb6c91976
 static const uint32_t SELECTOR_INSURACE_C_StakingV2Controller_M_stakeTokens = 0x0bea440d;
 
+// Txn - https://etherscan.io/tx/0xff04f02dfdf18710986df748c6b7922cfc3b1f48e671cd6f1a63e5769fd58f01
+static const uint32_t SELECTOR_INSURACE_C_StakingV2Controller_M_proposeUnstakes = 0x5ace4df7;
+
+// Txn - https://etherscan.io/tx/0xe5d67f8acaf43eb28aa6cda8b07b291ce21c6a71837a5cf75948a510a7cd579a
+static const uint32_t SELECTOR_INSURACE_C_StakingV2Controller_M_withdrawTokens = 0x31e6cbb4;
+
+// Txn - https://etherscan.io/tx/0x9a65941106bfc25c3521fa36483b3803579c81b1dd6dbaea624ea7bb5e721813
+static const uint32_t SELECTOR_INSURACE_C_RewardController_M_unlockReward = 0x6a69d93f;
+
+// Txn - https://etherscan.io/tx/0xbe5ef4de24df01b5a231244bd3ac45522d7531b43ffad3dffb0c2a8508a06573
+static const uint32_t SELECTOR_INSURACE_C_RewardController_M_withdrawReward = 0x523a3f08;
+
 // Array of all the different boilerplate selectors. Make sure this follows the same order as the
 // enum defined in `boilerplate_plugin.h`
 // EDIT THIS: Use the names of the array declared above.
@@ -43,6 +55,10 @@ const uint32_t INSURACE_SELECTORS[NUM_SELECTORS] = {
     SELECTOR_INSURACE_C_COVER_M_BUY_COVER_V3,
     SELECTOR_INSURACE_C_COVER_M_CANCEL_COVER,
     SELECTOR_INSURACE_C_StakingV2Controller_M_stakeTokens,
+    SELECTOR_INSURACE_C_StakingV2Controller_M_proposeUnstakes,
+    SELECTOR_INSURACE_C_StakingV2Controller_M_withdrawTokens,
+    SELECTOR_INSURACE_C_RewardController_M_unlockReward,
+    SELECTOR_INSURACE_C_RewardController_M_withdrawReward,
 };
 
 // Function to dispatch calls from the ethereum app.

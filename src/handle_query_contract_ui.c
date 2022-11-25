@@ -76,6 +76,22 @@ void set_first_param_ui(ethQueryContractUI_t *msg, context_t *context) {
             strlcpy(msg->title, "Stake", msg->titleLength);
             strlcpy(msg->msg, "Tokens", msg->msgLength);
             break;
+        case INSURACE_C_StakingV2Controller_M_proposeUnstakes:
+            strlcpy(msg->title, "Propose", msg->titleLength);
+            strlcpy(msg->msg, "Unstakes", msg->msgLength);
+            break;
+        case INSURACE_C_StakingV2Controller_M_withdrawTokens:
+            strlcpy(msg->title, "Withdraw", msg->titleLength);
+            strlcpy(msg->msg, "Tokens", msg->msgLength);
+            break;
+        case INSURACE_C_RewardController_M_unlockReward:
+            strlcpy(msg->title, "Unlock", msg->titleLength);
+            strlcpy(msg->msg, "Reward", msg->msgLength);
+            break;
+        case INSURACE_C_RewardController_M_withdrawReward:
+            strlcpy(msg->title, "Withdraw", msg->titleLength);
+            strlcpy(msg->msg, "Reward", msg->msgLength);
+            break;
         default:
             PRINTF("Wrong selector index = %d\n", context->selectorIndex);
             msg->result = ETH_PLUGIN_RESULT_ERROR;

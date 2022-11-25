@@ -107,6 +107,14 @@ void handle_provide_parameter(void *parameters) {
             break;
         case INSURACE_C_StakingV2Controller_M_stakeTokens:
             break;
+        case INSURACE_C_StakingV2Controller_M_proposeUnstakes:
+            break;
+        case INSURACE_C_StakingV2Controller_M_withdrawTokens:
+            break;
+        case INSURACE_C_RewardController_M_unlockReward:
+            break;
+        case INSURACE_C_RewardController_M_withdrawReward:
+            break;
         default:
             PRINTF("Selector Index not supported: %d\n", context->selectorIndex);
             msg->result = ETH_PLUGIN_RESULT_ERROR;

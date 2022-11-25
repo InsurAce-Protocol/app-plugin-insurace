@@ -6,7 +6,7 @@
 
 // Number of selectors defined in this plugin. Should match the enum `selector_t`.
 // EDIT THIS: Put in the number of selectors your plugin is going to support.
-#define NUM_SELECTORS 3
+#define NUM_SELECTORS 7
 
 // Name of the plugin.
 // EDIT THIS: Replace with your plugin name.
@@ -19,6 +19,10 @@ typedef enum {
     INSURACE_C_COVER_M_BUY_COVER_V3 = 0,
     INSURACE_C_COVER_M_CANCEL_COVER,
     INSURACE_C_StakingV2Controller_M_stakeTokens,
+    INSURACE_C_StakingV2Controller_M_proposeUnstakes,
+    INSURACE_C_StakingV2Controller_M_withdrawTokens,
+    INSURACE_C_RewardController_M_unlockReward,
+    INSURACE_C_RewardController_M_withdrawReward,
 } selector_t;
 
 // Enumeration used to parse the smart contract data.
@@ -33,7 +37,12 @@ typedef enum {
     INSURACE_C_COVER_M_BUY_COVER_V3_P_PRODUCTS_OFFSET,
     INSURACE_C_COVER_M_CANCEL_COVER_P_COVER_ID,
     INSURACE_C_StakingV2Controller_M_stakeTokens_P_amount,
-    // INSURACE_C_StakingV2Controller_M_stakeTokens_P_token,
+    INSURACE_C_StakingV2Controller_M_stakeTokens_P_token,
+    INSURACE_C_StakingV2Controller_M_proposeUnstakes_P_amount,
+    INSURACE_C_StakingV2Controller_M_proposeUnstakes_P_token,
+    INSURACE_C_StakingV2Controller_M_withdrawTokens_P_caller,
+    INSURACE_C_RewardController_M_unlockReward_P_tokenList_OFFSET,
+    INSURACE_C_RewardController_M_withdrawReward_P_gameId,  
 } parameter;
 
 // EDIT THIS: Rename `BOILERPLATE` to be the same as the one initialized in `main.c`.

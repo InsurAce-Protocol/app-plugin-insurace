@@ -28,6 +28,36 @@
                     ],
                     "method": "stakeTokens",
                     "plugin": "InsurAce"
+                },
+                "0x5ace4df7": {
+                    "erc20OfInterest": [
+                    ],
+                    "method": "proposeUnstake",
+                    "plugin": "InsurAce"
+                },
+                "0x31e6cbb4": {
+                    "erc20OfInterest": [
+                    ],
+                    "method": "withdrawTokens",
+                    "plugin": "InsurAce"
+                }
+            }
+        },
+        {
+            "address": "0x9933b0419cfb71791da75ac2dcea952d0875c967",
+            "contractName": "RewardController",
+            "selectors": {
+                "0x6a69d93f": {
+                    "erc20OfInterest": [
+                    ],
+                    "method": "unlockReward",
+                    "plugin": "InsurAce"
+                } , 
+                "0x523a3f08": {
+                    "erc20OfInterest": [
+                    ],
+                    "method": "withdrawReward",
+                    "plugin": "InsurAce"
                 }
             }
         }

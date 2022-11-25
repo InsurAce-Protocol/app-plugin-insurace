@@ -54,6 +54,18 @@ void handle_init_contract(void *parameters) {
         case INSURACE_C_StakingV2Controller_M_stakeTokens:
             context->next_param = INSURACE_C_StakingV2Controller_M_stakeTokens_P_amount;
             break;
+        case INSURACE_C_StakingV2Controller_M_proposeUnstakes:
+            context->next_param = INSURACE_C_StakingV2Controller_M_proposeUnstakes_P_amount;
+            break;
+        case INSURACE_C_StakingV2Controller_M_withdrawTokens:
+            context->next_param = INSURACE_C_StakingV2Controller_M_withdrawTokens_P_caller;
+            break;
+        case INSURACE_C_RewardController_M_unlockReward:
+            context->next_param = INSURACE_C_RewardController_M_unlockReward_P_tokenList_OFFSET;
+            break;
+        case INSURACE_C_RewardController_M_withdrawReward:
+            context->next_param = INSURACE_C_RewardController_M_withdrawReward_P_gameId;
+            break;
         // Keep this
         default:
             PRINTF("Missing selectorIndex: %d\n", context->selectorIndex);
