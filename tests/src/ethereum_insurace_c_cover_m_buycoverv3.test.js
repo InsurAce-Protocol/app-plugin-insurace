@@ -30,7 +30,7 @@ nano_models.forEach(function(model) {
   // Wait for the application to actually load and parse the transaction
   await waitForAppScreen(sim);
   // Navigate the display by pressing the right button `right_clicks` times, then pressing both buttons to accept the transaction.
-  await sim.navigateAndCompareSnapshots('.', model.name + '_insurace_buy_cover_v3', [right_clicks, 0]);
+  await sim.navigateAndCompareSnapshots('.', model.name + '_ethereum_insurace_c_cover_m_buycoverv3', [right_clicks, 0]);
 
   await tx;
   }));

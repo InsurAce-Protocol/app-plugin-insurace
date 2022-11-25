@@ -12,13 +12,13 @@ const testNetwork = "ethereum";
 const abi_path = `../networks/${testNetwork}/${pluginName}/abis/` + contractAddr + '.json';
 const abi = require(abi_path);
 
-// Test from replayed transaction: https://etherscan.io/tx/0x60132f221121a16beb6757426a2ebe9697658154bfc3eb5bdf49612cb6c91976 - stakeTokens
+// Test from replayed transaction: https://etherscan.io/tx/0xff04f02dfdf18710986df748c6b7922cfc3b1f48e671cd6f1a63e5769fd58f01 - proposeUnstake
 // EDIT THIS: build your own test
 nano_models.forEach(function(model) {
-  test('[Nano ' + model.letter + '] InsurAce StakingV2Controller / Stake Tokens', zemu(model, async (sim, eth) => {
+  test('[Nano ' + model.letter + '] InsurAce StakingV2Controller / Propose Unstake', zemu(model, async (sim, eth) => {
 
-  // The rawTx of the tx up above is accessible through: https://etherscan.io/getRawTx?tx=0x60132f221121a16beb6757426a2ebe9697658154bfc3eb5bdf49612cb6c91976
-  const serializedTx = txFromEtherscan("0x02f8b101118459682f0085040d6bbe7a83047868947d8c3f38c8545a770d57c8043d54e5715b1c584e80b8440bea440d000000000000000000000000000000000000000000000213a4b5f259bc302000000000000000000000000000544c42fbb96b39b21df61cf322b5edc285ee7429c080a00da8bcea3813d1755d72ede26b6e18456eab127c007fbcbc00b7380c51882c92a0792da4337d2defb6472be55397efad08f13eb76d2a1b8bc8ed537a98294135c4");
+  // The rawTx of the tx up above is accessible through: https://etherscan.io/getRawTx?tx=0xff04f02dfdf18710986df748c6b7922cfc3b1f48e671cd6f1a63e5769fd58f01
+  const serializedTx = txFromEtherscan("0x02f8b1011a8459682f008503fccbcb148302179f947d8c3f38c8545a770d57c8043d54e5715b1c584e80b8445ace4df700000000000000000000000000000000000000000000002ff4002c5b3e2b17ff000000000000000000000000544c42fbb96b39b21df61cf322b5edc285ee7429c080a0bf5e77b1147b239e81dadc87faf164da6a58218905a1ad49e12635f53cb0148ea018b3637b69a469f92a51081c7c697063dcf5faed44f975fffe66e30e747567fb");
 
   const tx = eth.signTransaction(
     "44'/60'/0'/0",
@@ -30,7 +30,7 @@ nano_models.forEach(function(model) {
   // Wait for the application to actually load and parse the transaction
   await waitForAppScreen(sim);
   // Navigate the display by pressing the right button `right_clicks` times, then pressing both buttons to accept the transaction.
-  await sim.navigateAndCompareSnapshots('.', model.name + '_ethereum_insurace_c_stakingv2controller_m_staketokens', [right_clicks, 0]);
+  await sim.navigateAndCompareSnapshots('.', model.name + '_ethereum_insurace_c_stakingv2controller_m_proposeunstakes', [right_clicks, 0]);
 
   await tx;
   }));
