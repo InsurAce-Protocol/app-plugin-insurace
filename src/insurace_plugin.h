@@ -42,7 +42,7 @@ typedef enum {
     INSURACE_C_StakingV2Controller_M_proposeUnstakes_P_token,
     INSURACE_C_StakingV2Controller_M_withdrawTokens_P_caller,
     INSURACE_C_RewardController_M_unlockReward_P_tokenList_OFFSET,
-    INSURACE_C_RewardController_M_withdrawReward_P_gameId,  
+    INSURACE_C_RewardController_M_withdrawReward_P_gameId,
 } parameter;
 
 // EDIT THIS: Rename `BOILERPLATE` to be the same as the one initialized in `main.c`.
