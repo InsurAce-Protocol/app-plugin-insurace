@@ -5,7 +5,7 @@ import { ethers } from "ethers";
 import { parseEther, parseUnits} from "ethers/lib/utils";
 
 // EDIT THIS: Replace with your contract address
-const contractAddr = "0x9933b0419CfB71791dA75aC2DceA952D0875c967";  // InsurAce contract RewardController - https://etherscan.io/address/0x9933b0419CfB71791dA75aC2DceA952D0875c967#code
+const contractAddr = "0x9933b0419cfb71791da75ac2dcea952d0875c967";  // InsurAce contract RewardController - https://etherscan.io/address/0x9933b0419CfB71791dA75aC2DceA952D0875c967#code
 // EDIT THIS: Replace `boilerplate` with your plugin name
 const pluginName = "insurace";
 const testNetwork = "ethereum";
