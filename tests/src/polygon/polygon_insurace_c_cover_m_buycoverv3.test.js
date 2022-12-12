@@ -3,7 +3,6 @@ import "regenerator-runtime/runtime";
 import { waitForAppScreen, zemu, genericTx, nano_models,SPECULOS_ADDRESS, txFromEtherscan} from '../test.fixture';
 import { ethers } from "ethers";
 import { parseEther, parseUnits} from "ethers/lib/utils";
-import ledgerService from "@ledgerhq/hw-app-eth/lib/services/ledger"
 
 // EDIT THIS: Replace with your contract address
 const contractAddr = "0x3e00fe643337a0f4e345539096ca01e6b8d4374a"; 
