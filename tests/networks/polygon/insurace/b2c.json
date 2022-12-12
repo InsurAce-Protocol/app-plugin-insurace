@@ -1,0 +1,66 @@
+{
+    "chainId": 137,
+    "contracts": [
+        {
+            "address": "0x3e00fe643337a0f4e345539096ca01e6b8d4374a",
+            "contractName": "Cover",
+            "selectors": {
+                "0xaaef41b9": {
+                    "erc20OfInterest": [
+                    ],
+                    "method": "buyCoverV3",
+                    "plugin": "InsurAce"
+                } , 
+                "0xb77b9409": {
+                    "erc20OfInterest": [
+                    ],
+                    "method": "cancelCover",
+                    "plugin": "InsurAce"
+                }
+            }
+        },
+        {
+            "address": "0xd50e8ce9d5c1f5228bcc77e318907bb4960578ef",
+            "contractName": "StakingV2Controller",
+            "selectors": {
+                "0x0bea440d": {
+                    "erc20OfInterest": [
+                    ],
+                    "method": "stakeTokens",
+                    "plugin": "InsurAce"
+                },
+                "0x5ace4df7": {
+                    "erc20OfInterest": [
+                    ],
+                    "method": "proposeUnstake",
+                    "plugin": "InsurAce"
+                },
+                "0x31e6cbb4": {
+                    "erc20OfInterest": [
+                    ],
+                    "method": "withdrawTokens",
+                    "plugin": "InsurAce"
+                }
+            }
+        },
+        {
+            "address": "0x7d8c3f38c8545a770d57c8043d54e5715b1c584e",
+            "contractName": "RewardController",
+            "selectors": {
+                "0x6a69d93f": {
+                    "erc20OfInterest": [
+                    ],
+                    "method": "unlockReward",
+                    "plugin": "InsurAce"
+                } , 
+                "0x523a3f08": {
+                    "erc20OfInterest": [
+                    ],
+                    "method": "withdrawReward",
+                    "plugin": "InsurAce"
+                }
+            }
+        }
+    ],
+    "name": "InsurAce"
+}
