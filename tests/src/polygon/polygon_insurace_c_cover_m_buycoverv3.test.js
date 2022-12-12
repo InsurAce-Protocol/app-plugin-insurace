@@ -40,7 +40,7 @@ nano_models.forEach(function(model) {
     serializedTx
   );
 
-  const right_clicks = model.letter === 'S' ? 7 : 5;
+  const right_clicks = model.letter === 'S' ? 5 : 5;
 
   // Wait for the application to actually load and parse the transaction
   await waitForAppScreen(sim);
@@ -49,6 +49,6 @@ nano_models.forEach(function(model) {
   await sim.navigateAndCompareSnapshots('.', model.name + '_polygon_insurace_c_cover_m_buycoverv3', [right_clicks, 0]);
 
   await tx;
-  }));
+  },testNetwork));
 });
 
